@@ -35,7 +35,7 @@ namespace ItemBasedCF
             var mlContext = new MLContext();
 
             // Load data
-            IDataView dataView = mlContext.Data.LoadFromTextFile<Rating>("C:\\Users\\Libin Luvis\\source\\repos\\movierecommendationsample\\ratings.csv", separatorChar: ',', hasHeader: true);
+            IDataView dataView = mlContext.Data.LoadFromTextFile<Rating>("", separatorChar: ',', hasHeader: true);
 
             // Define the model
             var dataProcessingPipeline = mlContext.Transforms.Conversion.MapValueToKey("UserIdEncoded", "userId")
