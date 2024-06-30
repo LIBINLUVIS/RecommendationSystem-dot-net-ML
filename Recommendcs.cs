@@ -47,7 +47,7 @@ namespace ItemBasedCF
 
             float userId = 10;
 
-            var dataView = mlContext.Data.LoadFromTextFile<Rating>("C:\\Users\\Libin Luvis\\source\\repos\\movierecommendationsample\\ratings.csv", separatorChar: ',', hasHeader: true);
+            var dataView = mlContext.Data.LoadFromTextFile<Rating>("", separatorChar: ',', hasHeader: true);
 
             var items = dataView.GetColumn<float>("movieId").Distinct().ToList();
 
